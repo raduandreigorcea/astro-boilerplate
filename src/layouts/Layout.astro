@@ -1,3 +1,8 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -8,7 +13,12 @@
 		<title>Template</title>
 	</head>
 	<body>
+		
+	<Header />
+	<main>
 		<slot />
+	</main>
+	<Footer />
 	</body>
 </html>
 
@@ -22,5 +32,11 @@
 		font-size: var(--font-size-base);
 		color: var(--color-text);
 		background-color: var(--color-background);
+	}
+	
+	main {
+		max-width: var(--max-width);
+		margin-inline: auto;
+		padding: var(--space-xl) var(--space-md);
 	}
 </style>
